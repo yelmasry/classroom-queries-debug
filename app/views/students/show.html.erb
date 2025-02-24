@@ -9,7 +9,7 @@
 </div>
 
 <div>
-  <a href="/delete_student/<%= student.id %>">
+  <a href="/delete_student/<%=student.id%>">
     Delete student
   </a>
 </div>
@@ -83,6 +83,8 @@
     <label for="course_id_box">
       Course
     </label>
+
+    <input type="hidden" id="course_id_box" name="query_course_id_box">
 
     <select id="course_id_box" name="query_course_id">
       <% Course.order({ :title => :asc }).each do |a_course| %>
