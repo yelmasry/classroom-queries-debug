@@ -1,5 +1,5 @@
 <h1>
-  Department #<%= @department.name %> details
+  Department #<%= @department.id %> details
 </h1>
 
 <div>
@@ -9,20 +9,20 @@
 </div>
 
 <div>
-  <a href="/delete_department/<%= @department.name %>">
+  <a href="/delete_department/<%= @department.id %>">
     Delete department
   </a>
 </div>
 
 <hr>
 
-<form action="/modify_department/<%= @department.name %>" method="post">
+<form action="/modify_department/<%= @department.id %>" method="post">
   <div>
     <label for="name_box">
       Name
     </label>
 
-    <input type="text" id="name_box" name="query_name" value="<%= @department.name %>">
+    <input type="text" id="name_box" name="query_name" value="<%= @department.id %>">
   </div>
 
   <button>
